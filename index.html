@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grace Impact Ministries</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    header, section, footer {
+      padding: 40px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    header {
+      background: #ffd700;
+      color: #000;
+      text-align: center;
+      padding: 20px;
+    }
+
+    nav {
+      background: #ff6347;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #000;
+    }
+
+    section {
+      min-height: 100vh;
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .home { background-color: #f0f8ff; color: #00008b; }
+    .about { background-color: #fff0f5; color: #8b008b; }
+    .mission { background-color: #e6ffe6; color: #006400; }
+    .vision { background-color: #fffacd; color: #b22222; }
+    .corevalues { background-color: #f5f5dc; color: #2f4f4f; }
+    .testimonials { background-color: #ffe4b5; color: #8b4513; }
+    .gallery { background-color: #e0ffff; color: #4682b4; }
+    .faq { background-color: #fafad2; color: #4b0082; }
+    .contact { background-color: #d3d3d3; color: #000; }
+    .donation { background-color: #f08080; color: #fff; }
+    .signin { background-color: #dda0dd; color: #4b0082; }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.querySelector(id).classList.add('active');
+    }
+
+    window.onload = function () {
+      showSection('#home');
+    };
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Grace Impact Ministries</h1>
+    <p>"Grace in Action — Touch Lives Through Grace."</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home" onclick="showSection('#home'); return false;">Home</a></li>
+      <li><a href="#about" onclick="showSection('#about'); return false;">About</a></li>
+      <li><a href="#mission" onclick="showSection('#mission'); return false;">Mission</a></li>
+      <li><a href="#vision" onclick="showSection('#vision'); return false;">Vision</a></li>
+      <li><a href="#corevalues" onclick="showSection('#corevalues'); return false;">Core Values</a></li>
+      <li><a href="#testimonials" onclick="showSection('#testimonials'); return false;">Testimonials</a></li>
+      <li><a href="#gallery" onclick="showSection('#gallery'); return false;">Gallery</a></li>
+      <li><a href="#faq" onclick="showSection('#faq'); return false;">FAQ</a></li>
+      <li><a href="#contact" onclick="showSection('#contact'); return false;">Contact</a></li>
+      <li><a href="#donation" onclick="showSection('#donation'); return false;">Donate</a></li>
+      <li><a href="#signin" onclick="showSection('#signin'); return false;">Sign In</a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="home active">
+    <h2>Welcome to Grace Impact Ministries</h2>
+    <p>Transforming lives through the power of Grace.</p>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>Grace Impact Ministries is dedicated to empowering communities through faith, outreach, and grace-filled action.</p>
+  </section>
+
+  <section id="mission" class="mission">
+    <h2>Our Mission</h2>
+    <p>To touch lives through grace, faith, and service.</p>
+  </section>
+
+  <section id="vision" class="vision">
+    <h2>Our Vision</h2>
+    <p>Building a world grounded in spiritual transformation and compassion.</p>
+  </section>
+
+  <section id="corevalues" class="corevalues">
+    <h2>Core Values</h2>
+    <ul>
+      <li>Faith</li>
+      <li>Compassion</li>
+      <li>Service</li>
+      <li>Grace</li>
+    </ul>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>Testimonials</h2>
+    <p>“Grace Impact changed my life and gave me purpose.” – A Happy Member</p>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <p>See our outreach, mission trips, and events.</p>
+  </section>
+
+  <section id="faq" class="faq">
+    <h2>FAQs</h2>
+    <p><strong>Q:</strong> How can I join the ministry?<br><strong>A:</strong> Use the sign-in form to register your interest.</p>
+    <p><strong>Q:</strong> Do you accept donations online?<br><strong>A:</strong> Yes! Please use the donate page.</p>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: graceimpactministries31@gmail.com</p>
+    <p>Phone: 0743188297</p>
+    <p>Facebook | Instagram | Twitter | YouTube</p>
+  </section>
+
+  <section id="donation" class="donation">
+    <h2>Donate to Support</h2>
+    <p>PayBill Number: 0743188297 | Account: donate</p>
+  </section>
+
+  <section id="signin" class="signin">
+    <h2>Sign In to Join</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required /><br><br>
+      <input type="email" placeholder="Email Address" required /><br><br>
+      <input type="submit" value="Join Now" />
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Grace Impact Ministries. All rights reserved.</p>
+  </footer>
+</body>
+</html>
